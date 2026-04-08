@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>David van Rooyen — CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    :root {
+      --navy: #1B2A4A;
+      --navy-light: #243556;
+      --accent: #3B5998;
+      --white: #ffffff;
+      --light-gray: #f4f4f4;
+      --text-dark: #2c2c2c;
+      --text-muted: #d0d6e0;
+      --sidebar-width: 34%;
+      --main-width: 66%;
+    }
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    body {
+      font-family: 'Open Sans', 'Segoe UI', sans-serif;
+      background: #e0e0e0;
+      color: var(--text-dark);
+      font-size: 9.5pt;
+      line-height: 1.45;
+    }
+
+    .cv-container {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      background: linear-gradient(to right, var(--navy) 0%, var(--navy) var(--sidebar-width), var(--white) var(--sidebar-width), var(--white) 100%);
+      box-shadow: 0 0 20px rgba(0,0,0,0.15);
+      position: relative;
+    }
+
+    /* ── HEADER ─────────────────────────────── */
+
+    .header {
+      background: var(--navy);
+      display: flex;
+      align-items: center;
+      padding: 28px 0 28px 0;
+      position: relative;
+    }
+
+    .header-photo-area {
+      width: var(--sidebar-width);
+      display: flex;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .header-photo-area img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      border: 4px solid var(--white);
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .header-info {
+      flex: 1;
+      padding-right: 35px;
+    }
+
+    .header-info h1 {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 800;
+      font-size: 26pt;
+      color: var(--white);
+      letter-spacing: 2px;
+      margin-bottom: 2px;
+    }
+
+    .header-info .subtitle {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 600;
+      font-size: 11pt;
+      color: var(--text-muted);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    /* ── BODY TWO-COLUMN ────────────────────── */
+
+    .body {
+      display: flex;
+      min-height: calc(297mm - 170px);
+    }
+
+    .sidebar {
+      width: var(--sidebar-width);
+      background: var(--navy);
+      color: var(--white);
+      padding: 25px 22px 40px 22px;
+      flex-shrink: 0;
+    }
+
+    .main {
+      width: var(--main-width);
+      background: var(--white);
+      padding: 25px 32px 40px 28px;
+    }
+
+    /* ── SIDEBAR STYLES ─────────────────────── */
+
+    .sidebar-section {
+      margin-bottom: 24px;
+    }
+
+    .sidebar-section-title {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 700;
+      font-size: 12pt;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid rgba(255,255,255,0.25);
+      margin-bottom: 12px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 8px;
+      font-size: 8.5pt;
+      line-height: 1.4;
+    }
+
+    .contact-item i {
+      width: 18px;
+      text-align: center;
+      margin-right: 10px;
+      margin-top: 2px;
+      font-size: 10pt;
+      color: var(--text-muted);
+    }
+
+    .contact-item span,
+    .contact-item a {
+      color: var(--white);
+      text-decoration: none;
+      word-break: break-all;
+    }
+
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    .skill-category {
+      margin-bottom: 10px;
+    }
+
+    .skill-category-label {
+      font-weight: 700;
+      font-size: 8.5pt;
+      margin-bottom: 3px;
+      color: var(--text-muted);
+    }
+
+    .skill-category-items {
+      font-size: 8.5pt;
+      line-height: 1.5;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .sidebar-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar-list li {
+      font-size: 8.5pt;
+      margin-bottom: 5px;
+      padding-left: 12px;
+      position: relative;
+    }
+
+    .sidebar-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 7px;
+      width: 5px;
+      height: 5px;
+      background: var(--text-muted);
+      border-radius: 50%;
+    }
+
+    .lang-level {
+      color: var(--text-muted);
+      font-size: 7.5pt;
+    }
+
+    /* ── MAIN CONTENT STYLES ────────────────── */
+
+    .main-section {
+      margin-bottom: 18px;
+    }
+
+    .main-section-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .section-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--navy);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 12px;
+      flex-shrink: 0;
+    }
+
+    .section-icon i {
+      color: var(--white);
+      font-size: 13px;
+    }
+
+    .main-section-title {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 700;
+      font-size: 14pt;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--navy);
+      border-bottom: 2px solid var(--navy);
+      padding-bottom: 4px;
+      flex: 1;
+    }
+
+    .profile-text {
+      font-size: 9.5pt;
+      line-height: 1.55;
+      color: #444;
+      text-align: justify;
+    }
+
+    .hl {
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    /* ── EXPERIENCE ENTRIES ──────────────────── */
+
+    .exp-entry {
+      margin-bottom: 14px;
+      page-break-inside: avoid;
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1px;
+    }
+
+    .exp-company {
+      font-weight: 700;
+      font-size: 10pt;
+      color: var(--navy);
+    }
+
+    .exp-dates {
+      font-size: 8.5pt;
+      color: #666;
+      white-space: nowrap;
+      font-weight: 600;
+    }
+
+    .exp-role {
+      font-size: 9pt;
+      font-style: italic;
+      color: #555;
+      margin-bottom: 4px;
+    }
+
+    .exp-subrole {
+      font-size: 8.5pt;
+      font-style: italic;
+      color: #666;
+      margin-top: 8px;
+      margin-bottom: 4px;
+    }
+
+    .exp-bullets {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .exp-bullets > li {
+      padding-left: 14px;
+      position: relative;
+      margin-bottom: 3px;
+      font-size: 9pt;
+      line-height: 1.45;
+    }
+
+    .exp-bullets > li::before {
+      content: '';
+      position: absolute;
+      left: 2px;
+      top: 6px;
+      width: 4px;
+      height: 4px;
+      background: var(--navy);
+      border-radius: 50%;
+    }
+
+    .exp-sub-bullets {
+      list-style: none;
+      padding-left: 8px;
+      margin-top: 2px;
+    }
+
+    .exp-sub-bullets li {
+      padding-left: 14px;
+      position: relative;
+      margin-bottom: 2px;
+      font-size: 8.5pt;
+      line-height: 1.4;
+      color: #555;
+    }
+
+    .exp-sub-bullets li::before {
+      content: '';
+      position: absolute;
+      left: 2px;
+      top: 6px;
+      width: 4px;
+      height: 4px;
+      border: 1px solid var(--navy);
+      border-radius: 50%;
+    }
+
+    /* ── EDUCATION ENTRIES ───────────────────── */
+
+    .edu-entry {
+      margin-bottom: 10px;
+      page-break-inside: avoid;
+    }
+
+    .edu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .edu-institution {
+      font-weight: 700;
+      font-size: 10pt;
+      color: var(--navy);
+    }
+
+    .edu-dates {
+      font-size: 8.5pt;
+      color: #666;
+      white-space: nowrap;
+      font-weight: 600;
+    }
+
+    .edu-detail {
+      font-size: 9pt;
+      color: #555;
+      margin-top: 1px;
+    }
+
+    /* ── PRINT STYLES ───────────────────────── */
+
+    @media print {
+      body {
+        background: none;
+        margin: 0;
+        padding: 0;
+        font-size: 9.5pt;
+      }
+
+      .cv-container {
+        width: 100%;
+        box-shadow: none;
+        margin: 0;
+      }
+
+      .body {
+        min-height: 0;
+      }
+
+      .exp-entry {
+        page-break-inside: avoid;
+      }
+
+      .edu-entry {
+        page-break-inside: avoid;
+      }
+
+      .main-section-header {
+        page-break-after: avoid;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+    }
+
+    @media screen {
+      .cv-container {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="cv-container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-photo-area">
+      <img src="Headshot.png" alt="David van Rooyen">
+    </div>
+    <div class="header-info">
+      <h1>DAVID VAN ROOYEN</h1>
+      <div class="subtitle">Strategy &amp; Operations Leader</div>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="body">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Contact</div>
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          <span>+44 7788 842055</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:davidvanrooyen14@yahoo.com">davidvanrooyen14@yahoo.com</a>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Helsinki, Finland</span>
+        </div>
+        <div class="contact-item">
+          <i class="fab fa-linkedin-in"></i>
+          <a href="https://www.linkedin.com/in/david-van-rooyen-1662a73b/" target="_blank">linkedin.com/in/david-van-rooyen</a>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Skills</div>
+        <div class="skill-category">
+          <div class="skill-category-label">Core Competencies</div>
+          <div class="skill-category-items">Financial modelling, business case development, SQL, data analysis, data visualisation</div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-category-label">Tools</div>
+          <div class="skill-category-items">Excel, Google Sheets, PowerPoint, Google Slides, Snowflake, Looker, Tableau</div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-category-label">AI &amp; Automation</div>
+          <div class="skill-category-items">Early adopter of AI-assisted development; self-built web applications and Python workflow automations using Cursor, Claude, and ChatGPT</div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-title">Languages</div>
+        <ul class="sidebar-list">
+          <li>English <span class="lang-level">— Native</span></li>
+          <li>Swedish <span class="lang-level">— Basic working proficiency</span></li>
+          <li>Finnish <span class="lang-level">— Elementary</span></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main">
+
+      <!-- PROFILE -->
+      <div class="main-section">
+        <div class="main-section-header">
+          <div class="section-icon"><i class="fas fa-user"></i></div>
+          <div class="main-section-title">Profile</div>
+        </div>
+        <p class="profile-text">Strategy &amp; Operations leader with 6+ years of experience across consulting (<strong class="hl">Bain &amp; Company</strong>) and high-growth technology companies (<strong class="hl">Wolt</strong>, <strong class="hl">Voi</strong>). Track record delivering <strong class="hl">&euro;10M+ growth</strong> and <strong class="hl">&euro;7M+ cost savings</strong> through cross-functional execution across European markets. Strong analytical background with expertise in SQL, financial modelling, and data-driven decision-making.</p>
+      </div>
+
+      <!-- PROFESSIONAL EXPERIENCE -->
+      <div class="main-section">
+        <div class="main-section-header">
+          <div class="section-icon"><i class="fas fa-briefcase"></i></div>
+          <div class="main-section-title">Professional Experience</div>
+        </div>
+
+        <!-- Wolt -->
+        <div class="exp-entry">
+          <div class="exp-header">
+            <span class="exp-company">Wolt &mdash; Helsinki, Finland</span>
+            <span class="exp-dates">May 2025 &ndash; Present</span>
+          </div>
+          <div class="exp-role">Senior Manager, International Strategy &amp; Operations</div>
+          <ul class="exp-bullets">
+            <li>Led turnaround of 10 priority cities across Denmark, Norway, and Sweden, delivering <strong class="hl">~&euro;10M incremental annual GOV (+~10%)</strong></li>
+            <li>Identified and addressed performance gaps across selection, churn, delivery experience, and pricing, including:
+              <ul class="exp-sub-bullets">
+                <li>Expanding selection by targeting high-value merchants (by geography, cuisine, and performance)</li>
+                <li>Reducing merchant churn through root-cause analysis of key pain points</li>
+                <li>Improving delivery times by identifying bottlenecks in the delivery flow</li>
+                <li>Optimising pricing, fees, discounts, and promotions</li>
+              </ul>
+            </li>
+            <li>Partnered with global and local marketing teams to design and execute high-impact, efficient acquisition campaigns, targeting higher-LTV customers aligned with improved service offering</li>
+          </ul>
+        </div>
+
+        <!-- Standab -->
+        <div class="exp-entry">
+          <div class="exp-header">
+            <span class="exp-company">Standab &mdash; Stockholm, Sweden</span>
+            <span class="exp-dates">Jan 2026 &ndash; Present</span>
+          </div>
+          <div class="exp-role">Advisor, Strategy &amp; Operations (Part-time)</div>
+          <ul class="exp-bullets">
+            <li>Advise micromobility infrastructure start-up on business model, pricing, and expansion strategy</li>
+            <li>Supported successful contract win in G&auml;vle, Sweden (with Voi)</li>
+            <li>Develop go-to-market approach and commercial playbooks for urban expansion</li>
+          </ul>
+        </div>
+
+        <!-- Voi Technology -->
+        <div class="exp-entry">
+          <div class="exp-header">
+            <span class="exp-company">Voi Technology &mdash; Helsinki &amp; Stockholm</span>
+            <span class="exp-dates">Aug 2021 &ndash; May 2025</span>
+          </div>
+          <div class="exp-role">Senior Operations Strategy Manager</div>
+          <ul class="exp-bullets">
+            <li>Delivered <strong class="hl">~&euro;7.5M annual cost savings</strong> across key initiatives: battery refurbishment (<strong class="hl">&euro;5M</strong>) and workforce optimisation (<strong class="hl">&euro;2.5M</strong>)</li>
+            <li>Improved workforce productivity by <strong class="hl">~15&ndash;20%</strong> through incentive design and operational efficiency initiatives</li>
+            <li>Owned analysis and reporting of company-wide cost KPIs (e.g., variable cost per ride), presenting monthly to CEO and executive team</li>
+          </ul>
+          <div class="exp-subrole">Commercial Projects Manager (previous role)</div>
+          <ul class="exp-bullets">
+            <li>Led cross-functional teams (10&ndash;15 members) to secure operating licenses in major European cities</li>
+            <li>Contributed to wins in <strong class="hl">London, Milan, Oslo, and Vienna</strong> (<strong class="hl">~&euro;20M+</strong> contract value per city)</li>
+            <li>Developed bid strategies and coordinated execution across product, marketing, finance, and local teams</li>
+          </ul>
+        </div>
+
+        <!-- Bain & Company -->
+        <div class="exp-entry">
+          <div class="exp-header">
+            <span class="exp-company">Bain &amp; Company &mdash; Helsinki, Finland</span>
+            <span class="exp-dates">Aug 2020 &ndash; Aug 2021</span>
+          </div>
+          <div class="exp-role">Senior Associate Consultant</div>
+          <ul class="exp-bullets">
+            <li>Delivered commercial and operational strategy projects across industrials, digital platforms, and services</li>
+            <li>Generated <strong class="hl">~&euro;6M revenue uplift</strong> for <strong class="hl">Hiab</strong> through pricing, sales capability, and operational improvements</li>
+            <li>Conducted <strong class="hl">6 commercial due diligences</strong>, including supporting <strong class="hl">EQT</strong> on the <strong class="hl">~&euro;6B Anticimex</strong> acquisition, analysing market growth, competitive dynamics, and expansion opportunities</li>
+            <li>Led customer and expert interviews across projects (incl. Hiab and PE diligences) to identify demand drivers, pain points, and willingness to pay, directly shaping strategic recommendations</li>
+            <li>Supported Bain&rsquo;s successful pitch to <strong class="hl">Spotify</strong>, developing expansion strategy workstreams and working directly with <strong class="hl">CEO Daniel Ek</strong></li>
+          </ul>
+        </div>
+
+        <!-- UK House of Commons -->
+        <div class="exp-entry">
+          <div class="exp-header">
+            <span class="exp-company">UK House of Commons &mdash; London, UK</span>
+            <span class="exp-dates">Jun 2017 &ndash; Mar 2020</span>
+          </div>
+          <div class="exp-role">Senior Parliamentary Advisor</div>
+          <ul class="exp-bullets">
+            <li>Led a team of 5 people, supporting a Member of Parliament across multiple policy areas</li>
+            <li>Produced briefings, speeches, and policy recommendations on complex economic and regulatory topics</li>
+            <li>Managed relationships with senior stakeholders across government, industry, and media</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- EDUCATION -->
+      <div class="main-section">
+        <div class="main-section-header">
+          <div class="section-icon"><i class="fas fa-graduation-cap"></i></div>
+          <div class="main-section-title">Education</div>
+        </div>
+
+        <div class="edu-entry">
+          <div class="edu-header">
+            <span class="edu-institution">Corporate Finance Institute (CFI)</span>
+            <span class="edu-dates">2024</span>
+          </div>
+          <div class="edu-detail">Certified Financial Modelling &amp; Valuation Analyst (FMVA) &mdash; <strong class="hl">98%</strong></div>
+        </div>
+
+        <div class="edu-entry">
+          <div class="edu-header">
+            <span class="edu-institution">University of Durham (UK)</span>
+            <span class="edu-dates">2013 &ndash; 2019</span>
+          </div>
+          <div class="edu-detail">PhD, Government &amp; International Affairs &mdash; 2014&ndash;2019 (<strong class="hl">No Corrections</strong>)</div>
+          <div class="edu-detail">MSc, Global Politics &mdash; 2013&ndash;2014 (<strong class="hl">2nd in cohort</strong>)</div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>

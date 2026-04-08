@@ -16,8 +16,8 @@
       --light-gray: #f4f4f4;
       --text-dark: #2c2c2c;
       --text-muted: #d0d6e0;
-      --sidebar-width: 34%;
-      --main-width: 66%;
+      --sidebar-width: 32%;
+      --main-width: 68%;
     }
 
     *, *::before, *::after {
@@ -265,7 +265,14 @@
 
     .exp-entry {
       margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #e0e0e0;
       page-break-inside: avoid;
+    }
+
+    .exp-entry:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
     }
 
     .exp-header {
@@ -283,9 +290,9 @@
 
     .exp-dates {
       font-size: 8.5pt;
-      color: #666;
+      color: var(--navy);
       white-space: nowrap;
-      font-weight: 600;
+      font-weight: 700;
     }
 
     .exp-role {
@@ -375,9 +382,9 @@
 
     .edu-dates {
       font-size: 8.5pt;
-      color: #666;
+      color: var(--navy);
       white-space: nowrap;
-      font-weight: 600;
+      font-weight: 700;
     }
 
     .edu-detail {
@@ -476,7 +483,7 @@
       <div class="sidebar-section">
         <div class="sidebar-section-title">Skills</div>
         <div class="skill-category">
-          <div class="skill-category-label">Core Competencies</div>
+          <div class="skill-category-label">Technical Competencies</div>
           <div class="skill-category-items">Financial modelling, business case development, SQL, data analysis, data visualisation</div>
         </div>
         <div class="skill-category">
@@ -509,7 +516,7 @@
           <div class="section-icon"><i class="fas fa-user"></i></div>
           <div class="main-section-title">Profile</div>
         </div>
-        <p class="profile-text">Strategy &amp; Operations leader with 6+ years of experience across consulting (<strong class="hl">Bain &amp; Company</strong>) and high-growth technology companies (<strong class="hl">Wolt</strong>, <strong class="hl">Voi</strong>). Track record delivering <strong class="hl">&euro;10M+ growth</strong> and <strong class="hl">&euro;7M+ cost savings</strong> through cross-functional execution across European markets. Strong analytical background with expertise in SQL, financial modelling, and data-driven decision-making.</p>
+        <p class="profile-text">Strategy &amp; Operations leader with 6+ years of experience across consulting (<strong class="hl">Bain &amp; Company</strong>) and high-growth technology companies (<strong class="hl">Wolt</strong>, <strong class="hl">Voi</strong>). Track record delivering <strong class="hl">&euro;10M+ growth</strong> and <strong class="hl">&euro;7M+ cost savings</strong> through cross-functional execution across <strong class="hl">12 European markets</strong>. Strong analytical background with expertise in SQL, financial modelling, and data-driven decision-making. Holds a PhD from Durham University.</p>
       </div>
 
       <!-- PROFESSIONAL EXPERIENCE -->
@@ -528,14 +535,7 @@
           <div class="exp-role">Senior Manager, International Strategy &amp; Operations</div>
           <ul class="exp-bullets">
             <li>Led turnaround of 10 priority cities across Denmark, Norway, and Sweden, delivering <strong class="hl">~&euro;10M incremental annual GOV (+~10%)</strong></li>
-            <li>Identified and addressed performance gaps across selection, churn, delivery experience, and pricing, including:
-              <ul class="exp-sub-bullets">
-                <li>Expanding selection by targeting high-value merchants (by geography, cuisine, and performance)</li>
-                <li>Reducing merchant churn through root-cause analysis of key pain points</li>
-                <li>Improving delivery times by identifying bottlenecks in the delivery flow</li>
-                <li>Optimising pricing, fees, discounts, and promotions</li>
-              </ul>
-            </li>
+            <li>Identified and addressed performance gaps across merchant selection, churn, delivery experience, and pricing</li>
             <li>Partnered with global and local marketing teams to design and execute high-impact, efficient acquisition campaigns, targeting higher-LTV customers aligned with improved service offering</li>
           </ul>
         </div>
@@ -568,8 +568,7 @@
           </ul>
           <div class="exp-subrole">Commercial Projects Manager (previous role)</div>
           <ul class="exp-bullets">
-            <li>Led cross-functional teams (10&ndash;15 members) to secure operating licenses in major European cities</li>
-            <li>Contributed to wins in <strong class="hl">London, Milan, Oslo, and Vienna</strong> (<strong class="hl">~&euro;20M+</strong> contract value per city)</li>
+            <li>Led cross-functional teams (10&ndash;15 members) to secure operating licenses in major European cities, contributing to wins in <strong class="hl">London, Milan, Oslo, and Vienna</strong> (<strong class="hl">~&euro;20M+</strong> contract value per city)</li>
             <li>Developed bid strategies and coordinated execution across product, marketing, finance, and local teams</li>
           </ul>
         </div>
@@ -598,9 +597,9 @@
           </div>
           <div class="exp-role">Senior Parliamentary Advisor</div>
           <ul class="exp-bullets">
-            <li>Led a team of 5 people, supporting a Member of Parliament across multiple policy areas</li>
+            <li>Led a team of 5, supporting a Member of Parliament across multiple policy areas</li>
             <li>Produced briefings, speeches, and policy recommendations on complex economic and regulatory topics</li>
-            <li>Managed relationships with senior stakeholders across government, industry, and media</li>
+            <li>Managed senior stakeholder relationships across government, industry, and media</li>
           </ul>
         </div>
 
